@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - ../app/build:/var/www:rw # TODO: Load repo from git
+    ports:
+      - "80:80"
+      - "443:443"

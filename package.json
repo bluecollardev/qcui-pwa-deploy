@@ -1,0 +1,12 @@
+{
+  "name": "quickcommerce-ui-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ssl:create-cert": "sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./docker/nginx/etc/certs/nginx-selfsigned.key -out ./docker/nginx/etc/certs/nginx-selfsigned.crt"
+  },
+  "author": "",
+  "license": "ISC"
+}
