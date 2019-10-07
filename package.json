@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ssl:create-cert": "sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./docker/nginx/etc/certs/nginx-selfsigned.key -out ./docker/nginx/etc/certs/nginx-selfsigned.crt",
     "clean": "rm -rf ./app && mkdir app",
-    "start:docker": "npm run clean && bash ./docker/create.sh"
+    "start:docker": "npm run clean && bash ./docker/create.sh",
+    "browser:ignoressl": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --user-data-dir=/tmp/foo --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=https://localhost",
+    "browser:nocors": "open -n -a /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --args --user-data-dir=\"/tmp/chrome_dev_test\" --disable-web-security"
   },
   "author": "",
   "license": "ISC"
